@@ -1,31 +1,31 @@
-.header {
+.header-container {
     height: 60px;
     background-color: #1f2937;
     color: white;
 }
 
-.hero {
+.hero-container {
     height: 200px;
     background-color: #1f2937;
     color: white;
 }
 
-.information {
+.information-container {
     height: 200px;
     background-color: aquamarine;
 }
 
-.quote {
+.quote-container {
     height: 200px;
     background-color: #e5e7eb;
 }
 
-.banner {
+.banner-container {
     height: 150px;
     background-color: lightpink;
 }
 
-.footer {
+.footer-container {
     height: 60px;
     background-color: #1f2937;
     color: white;
