@@ -1,0 +1,32 @@
+.header {
+    height: 60px;
+    background-color: #1f2937;
+    color: white;
+}
+
+.hero {
+    height: 200px;
+    background-color: #1f2937;
+    color: white;
+}
+
+.information {
+    height: 200px;
+    background-color: aquamarine;
+}
+
+.quote {
+    height: 200px;
+    background-color: #e5e7eb;
+}
+
+.banner {
+    height: 150px;
+    background-color: lightpink;
+}
+
+.footer {
+    height: 60px;
+    background-color: #1f2937;
+    color: white;
+}
