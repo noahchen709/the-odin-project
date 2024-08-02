@@ -1,41 +1,55 @@
 .header-container {
-    height: 60px;
-    background-color: #1f2937;
-    color: white;
+  height: 60px;
+  background-color: #1f2937;
+  color: white;
+  display: flex;
+  justify-content: center;
+  .logo {
+    font-size: 24px;
+    color: #f9faf8;
+  }
+  .links {
     display: flex;
+    flex-direction: column;
     justify-content: center;
+    .link-list {
+    }
+  }
+}
+.link-item {
+    margin: 0 10px;
 }
 
 .row {
-    margin: auto;
-    width: 70%;
-    display: flex;
-    justify-content: space-between;
+  margin: auto;
+  width: 70%;
+  display: flex;
+  justify-content: space-between;
 }
 
 .hero-container {
-    height: 200px;
-    background-color: #1f2937;
-    color: white;
+  height: 200px;
+  background-color: #1f2937;
+  color: white;
 }
 
 .information-container {
-    height: 200px;
-    background-color: aquamarine;
+  height: 200px;
+  background-color: aquamarine;
 }
 
 .quote-container {
-    height: 200px;
-    background-color: #e5e7eb;
+  height: 200px;
+  background-color: #e5e7eb;
 }
 
 .banner-container {
-    height: 150px;
-    background-color: lightpink;
+  height: 150px;
+  background-color: lightpink;
 }
 
 .footer-container {
-    height: 60px;
-    background-color: #1f2937;
-    color: white;
+  height: 60px;
+  background-color: #1f2937;
+  color: white;
 }
