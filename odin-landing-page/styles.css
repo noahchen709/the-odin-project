@@ -2,8 +2,6 @@
   height: 60px;
   background-color: #1f2937;
   color: white;
-  display: flex;
-  justify-content: center;
   .logo {
     font-size: 24px;
     color: #f9faf8;
@@ -21,30 +19,49 @@
 }
 
 .row {
-  margin: auto;
   width: 70%;
   display: flex;
   justify-content: space-between;
 }
 
+.center-contents {
+  display: flex;
+  justify-content: center;
+}
+
+.vertically-center-contents {
+  margin: auto 0px;
+}
+
 .hero-container {
-  height: 200px;
+  height: 400px;
   background-color: #1f2937;
   color: white;
 }
 
+.hero-title {
+  font-weight: bold;
+  font-size: 48px;
+  color: #f9faf8;
+}
+
+.hero-secondary {
+  font-size: 18px;
+  color: #e5e7eba9;
+}
+
 .information-container {
-  height: 200px;
+  height: 400px;
   background-color: aquamarine;
 }
 
 .quote-container {
-  height: 200px;
+  height: 400px;
   background-color: #e5e7eb;
 }
 
 .banner-container {
-  height: 150px;
+  height: 350px;
   background-color: lightpink;
 }
 
