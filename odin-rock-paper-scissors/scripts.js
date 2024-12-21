@@ -6,8 +6,8 @@ function getComputerChoice() {
     };
 
     // 3 is the number of choices
-    randNumToThree = Math.ceil(Math.random() * 3);
-    choice = numToChoice[randNumToThree];
+    let randNumToThree = Math.ceil(Math.random() * 3);
+    let choice = numToChoice[randNumToThree];
     return choice;
 }
 
