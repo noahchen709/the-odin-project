@@ -1,3 +1,5 @@
+const choices = ["rock", "paper", "scissors"];
+
 function getComputerChoice() {
     const numToChoice = {
         1: "rock",
@@ -6,8 +8,8 @@ function getComputerChoice() {
     };
 
     // 3 is the number of choices
-    let randNumToThree = Math.ceil(Math.random() * 3);
-    let choice = numToChoice[randNumToThree];
+    let randNumToThree = Math.floor(Math.random() * 3);
+    let choice = choices[randNumToThree];
     return choice;
 }
 
