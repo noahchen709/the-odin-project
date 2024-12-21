@@ -7,4 +7,12 @@ function getComputerChoice() {
     return choice;
 }
 
-console.log(getComputerChoice());
+function getHumanChoice() {
+    let humanChoice;
+    do {
+        humanChoice = prompt("What is your choice? (rock, paper, scissors)").toLowerCase();
+    }
+    while (!choices.includes(humanChoice));
+
+    return humanChoice;
+}
