@@ -36,3 +36,4 @@ let computerScore = 0;
 let computerChoice = getComputerChoice();
 let humanChoice = getHumanChoice();
 playRound(humanChoice, computerChoice);
+tessg
