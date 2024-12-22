@@ -17,22 +17,40 @@ function getHumanChoice() {
     return humanChoice;
 }
 
-function playRound(humanChoice, computerChoice) {
-    let choiceIndexDifference = choices.indexOf(humanChoice) - choices.indexOf(computerChoice);
-    console.log(humanChoice);
-    console.log(computerChoice);
-    if (choiceIndexDifference == 1 || choiceIndexDifference == -2) {
-        console.log("You win! " + humanChoice + " beats " + computerChoice);
-    } else if (choiceIndexDifference == 0) {
-        console.log("You tied! You both chose " + humanChoice);
+function playGame() {
+    let humanScore = 0;
+    let computerScore = 0;
+
+    function playRound(humanChoice, computerChoice) {
+        let choiceIndexDifference = choices.indexOf(humanChoice) - choices.indexOf(computerChoice);
+        if (choiceIndexDifference == 1 || choiceIndexDifference == -2) {
+            console.log("You win! " + humanChoice + " beats " + computerChoice);
+            humanScore++;
+        } else if (choiceIndexDifference == 0) {
+            console.log("You tied! You both chose " + humanChoice);
+            humanScore++;
+            computerScore++;
+        } else {
+            console.log("You lose! " + computerChoice + " beats " + humanChoice);
+            computerScore++;
+        }
+    }
+
+    for (let i = 0; i < 5; i++) {
+        let computerChoice = getComputerChoice();
+        let humanChoice = getHumanChoice();
+        playRound(humanChoice, computerChoice);
+        console.log("Your score: " + humanScore);
+        console.log("Computer score: " + computerScore);
+    }
+
+    if (humanScore > computerScore) {
+        console.log("You beat the computer!");
+    } else if (humanScore == computerScore) {
+        console.log("You tied the computer!");
     } else {
-        console.log("You lose! " + computerChoice + " beats " + humanChoice);
+        console.log("You lose to the computer!")
     }
 }
 
-let humanScore = 0;
-let computerScore = 0;
-
-let computerChoice = getComputerChoice();
-let humanChoice = getHumanChoice();
-playRound(humanChoice, computerChoice);
+playGame();
