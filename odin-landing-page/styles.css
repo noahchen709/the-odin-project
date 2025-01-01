@@ -70,3 +70,7 @@
   background-color: #1f2937;
   color: white;
 }
+
+.flex-container {
+  display: flex;
+}
