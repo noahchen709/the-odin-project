@@ -21,36 +21,54 @@ function playGame() {
     let humanScore = 0;
     let computerScore = 0;
 
+    const result = document.querySelector("#result");
+    const humanScoreDiv = document.querySelector("#humanScore");
+    const computerScoreDiv = document.querySelector("#computerScore");
+    const winner = document.querySelector("#winner");
+
     function playRound(humanChoice, computerChoice) {
         let choiceIndexDifference = choices.indexOf(humanChoice) - choices.indexOf(computerChoice);
         if (choiceIndexDifference == 1 || choiceIndexDifference == -2) {
-            console.log("You win! " + humanChoice + " beats " + computerChoice);
+            result.textContent = "You win! " + humanChoice + " beats " + computerChoice;
             humanScore++;
         } else if (choiceIndexDifference == 0) {
-            console.log("You tied! You both chose " + humanChoice);
+            result.textContent = "You tied! You both chose " + humanChoice;
             humanScore++;
             computerScore++;
         } else {
-            console.log("You lose! " + computerChoice + " beats " + humanChoice);
+            result.textContent = "You lose! " + computerChoice + " beats " + humanChoice;
             computerScore++;
+        }
+        humanScoreDiv.textContent = "Your score: " + humanScore;
+        computerScoreDiv.textContent = "Computer score: " + computerScore;
+
+        if (humanScore >= 5 || computerScore >= 5) {
+            if (humanScore > computerScore) {
+                winner.style.color = "green";
+                winner.textContent = "You beat the computer!";
+            } else {
+                winner.style.color = "red";
+                winner.textContent = "You lose to the computer!";
+            }
+            rockButton.disabled = true;
+            paperButton.disabled = true;
+            scissorsButton.disabled = true;
         }
     }
 
-    for (let i = 0; i < 5; i++) {
-        let computerChoice = getComputerChoice();
-        let humanChoice = getHumanChoice();
-        playRound(humanChoice, computerChoice);
-        console.log("Your score: " + humanScore);
-        console.log("Computer score: " + computerScore);
-    }
+    const rockButton = document.querySelector("#rock");
+    const paperButton = document.querySelector("#paper");
+    const scissorsButton = document.querySelector("#scissors");
 
-    if (humanScore > computerScore) {
-        console.log("You beat the computer!");
-    } else if (humanScore == computerScore) {
-        console.log("You tied the computer!");
-    } else {
-        console.log("You lose to the computer!")
-    }
+    rockButton.addEventListener("click", () => {
+        playRound(rockButton.value, getComputerChoice())
+    });
+    paperButton.addEventListener("click", () => {
+        playRound(paperButton.value, getComputerChoice())
+    });
+    scissorsButton.addEventListener("click", () => {
+        playRound(scissorsButton.value, getComputerChoice())
+    });
 }
 
 playGame();
