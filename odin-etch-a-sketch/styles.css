@@ -10,7 +10,6 @@
 }
 
 .newSquare {
-    border-radius: 10px;
     width: calc(100% / var(--squares-per-side));
     aspect-ratio: 1/1;
 }

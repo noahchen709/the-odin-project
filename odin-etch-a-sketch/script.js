@@ -24,7 +24,7 @@ resetButton.addEventListener("click", () => {
     // Remove the previous grid
     container.innerHTML = "";
     let input = prompt("Enter the number of squares per side: ");
-    while(isNaN(squaresPerSide)) {
+    while(isNaN(input) || parseInt(input) > 100 || parseInt(input) < 0) {
         input = prompt("Enter the number of squares per side: ");
     }
     squaresPerSide = parseInt(input);
