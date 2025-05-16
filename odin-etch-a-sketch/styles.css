@@ -1,0 +1,13 @@
+.flexBox {
+    display: flex;
+    width: 960px;
+    height: 960px;
+    flex-wrap: wrap;
+}
+
+.newSquare {
+    border-radius: 10px;
+    background-color: beige;
+    width: calc(100% / var(--squares-per-side));
+    aspect-ratio: 1/1;
+}
