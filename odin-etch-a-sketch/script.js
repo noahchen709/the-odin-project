@@ -4,13 +4,17 @@ const totalSquares = Math.pow(squaresPerSide, 2);
 
 container.style.setProperty('--squares-per-side', squaresPerSide);
 
-for (let i = 0; i < totalSquares; i++) {
-    const newSquare = document.createElement("div");
-    newSquare.setAttribute("id", "square" + i);
-    newSquare.classList.add("newSquare");
-    newSquare.addEventListener("mouseover", () => {
-        newSquare.classList.add("penColor");
-    });
-
-    container.appendChild(newSquare);
+function generateGrid(numOfSquares) {
+    for (let i = 0; i < numOfSquares; i++) {
+        const newSquare = document.createElement("div");
+        newSquare.setAttribute("id", "square" + i);
+        newSquare.classList.add("newSquare");
+        newSquare.addEventListener("mouseover", () => {
+            newSquare.classList.add("penColor");
+        });
+    
+        container.appendChild(newSquare);
+    }
 }
+
+generateGrid(totalSquares);
